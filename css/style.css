@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #313131;  
+    padding: 8px;
+}
+
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+}
+
+nav img {
+    width: 150px;
+    margin-left: 50px;
+}
