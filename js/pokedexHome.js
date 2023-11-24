@@ -67,10 +67,12 @@ const creatListPoke = async () => {
         const divIdPoke = document.createElement('div')
         const imagePoke = document.createElement('img')
         const titleNamePoke = document.createElement('h2')
+        const linkPoke = document.createElement('a')
         articleCardPokemom.setAttribute('id', 'cardPoke')
         divIdPoke.setAttribute("id", 'idPoke')
         imagePoke.setAttribute('id', 'imgPoke')
         titleNamePoke.setAttribute('id', 'titleNamePoke')
+        linkPoke.setAttribute('href', `pageInfoPoke.html?id=${pokemom.id}`)
         divIdPoke.innerHTML = `N° ${pokemom.id}`
         imagePoke.src = pokemom.sprites.front_default
         titleNamePoke.innerHTML = pokemom.name
@@ -78,7 +80,8 @@ const creatListPoke = async () => {
         articleCardPokemom.appendChild(imagePoke)
         articleCardPokemom.appendChild(titleNamePoke)
         articleCardPokemom.appendChild(typesPoke(pokemom.types))
-        sectionListpoke.appendChild(articleCardPokemom)
+        linkPoke.appendChild(articleCardPokemom)
+        sectionListpoke.appendChild(linkPoke)
     })
 }
 
