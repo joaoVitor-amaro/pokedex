@@ -12,6 +12,17 @@ const getPokemom = async () => {
     return pokeData
 }
 
+const typesPoke = (pokemo) => {
+    const div_types = document.createElement("div")
+    div_types.setAttribute("id", "typesPokemons")
+    for (var i in pokemo) {
+        let spanTypePoke = document.createElement("span")
+        spanTypePoke.innerHTML = pokemo[i].type.name
+        div_types.appendChild(spanTypePoke)
+    }
+    return div_types
+}
+
 const creatListPoke = async () => {
     const data = await getPokemom()
     data.forEach((pokemom) => {
@@ -29,6 +40,7 @@ const creatListPoke = async () => {
         articleCardPokemom.appendChild(divIdPoke)
         articleCardPokemom.appendChild(imagePoke)
         articleCardPokemom.appendChild(titleNamePoke)
+        articleCardPokemom.appendChild(typesPoke(pokemom.types))
         sectionListpoke.appendChild(articleCardPokemom)
     })
 }
