@@ -82,6 +82,13 @@ const creatListPoke = async () => {
     })
 }
 
+const getPokemomSearch = async (pokemom) => {
+    const endpointSearch = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemom}/`)
+    const dataSearchPoke = await endpointSearch.json()
+    console.log(dataSearchPoke)
+    return dataSearchPoke
+}
+
 function pesquisarPoke() {
     const cardPoke = document.querySelectorAll("#cardPoke")
     searchInput = searchInput.value.toLocaleLowerCase()
