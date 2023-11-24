@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylePageInfo.css">
+    <link rel="shortcut icon" href="image/faviconPoke.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -19,15 +20,15 @@
     </header>
     <main>
         <article id="ContainerPokeInfo">
-            <h1 id="NamePokemom">Name Pokemom</h1>
-            <figure>
-                   <!-- IMG pokemom -->
-            </figure>
+            <h1 id="NamePokemom"></h1>
             <section id="inforPoke">
+                <figure id="containerImgPokeInfor">
+                    <!-- IMG pokemom -->
+                </figure>
                 <div id="containerInforPoke">
-                    <p>Altura: 40cm</p><hr>
-                    <p>Peso: 100g</p><hr>
-                    <p>tipo: Vidente | fantasma</p>
+                    <p>Altura: <span id="heightPoke"></span></p><hr>
+                    <p>Peso: <span id="weightPoke"></span></p><hr>
+                    <p id="typesPoke">Tipo: </p>
                 </div>
             </section>
             <section>
