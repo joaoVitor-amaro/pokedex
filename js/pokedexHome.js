@@ -114,14 +114,21 @@ const fetchPokemomSearch = (pokemomSearch) => {
     });
 }
 
+var searchInput = document.getElementById('searchInput')
+
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        pesquisarPoke();
+    }
+});
+
 function pesquisarPoke() {
     const cardPoke = document.querySelectorAll("#cardPoke")
-    searchInput = searchInput.value.toLocaleLowerCase()
-    if (searchInput != "") {
+    if (searchInput.value.toLocaleLowerCase() != "") {
         cardPoke.forEach((card) => {
             card.style.display = 'none'
         })
-        fetchPokemomSearch(searchInput)
+        fetchPokemomSearch(searchInput.value.toLocaleLowerCase())
     } else {
         alert('erro')
     }
