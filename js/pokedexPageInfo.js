@@ -15,6 +15,16 @@ const GetInforPoke = async (id) =>{
     console.log(date)
     return date
 }
+const typesPokemon = (typesPoke) => {
+    const spanType = document.createElement('span') 
+    typesPoke.forEach((tiposPoke, index) => {
+        spanType.innerHTML +=`${tiposPoke.type.name} `
+        if(index < typesPoke.length - 1) {
+            spanType.innerHTML += "| "
+        }
+    })
+    return spanType
+}
 
 const infoPoke = (id) => {
     GetInforPoke(id)
@@ -29,6 +39,7 @@ const infoPoke = (id) => {
             imgPokeInfo.setAttribute('height', '300')
             imgPokeInfo.setAttribute('id', "imagePoke")
             containerImgPokeInfor.appendChild(imgPokeInfo)
+            typesPoke.appendChild(typesPokemon(pokemom.types))
         })
 }
 
