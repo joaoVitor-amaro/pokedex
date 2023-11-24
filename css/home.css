@@ -3,3 +3,48 @@ main#corpoPrincipal {
     align-items: center;
     flex-direction: column;
 }
+
+section#searchPoke {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px
+}
+
+section#ListPoke {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1118px;
+}
+
+article#cardPoke {
+    width: 203px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px #00000078;
+    border-radius: 10px;
+    transition: transform 0.3s ease
+}
+
+article#cardPoke:hover {
+    transform: translateY(-5px)
+}
+
+div#idPoke {
+    color: black;
+}
+
+img#imgPoke {
+    display: flex;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+h2#titleNamePoke {
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}
