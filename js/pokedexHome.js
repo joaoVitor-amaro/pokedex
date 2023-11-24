@@ -12,12 +12,49 @@ const getPokemom = async () => {
     return pokeData
 }
 
+const backgroundType = (typePoke) => {
+    const backgroundTypePokeOne = {
+        fire: "#ff5e00",
+        water: "#065c96",
+        poison: "#bf3ce4",
+        bug: "#6abe09",
+        rock: "#A38C21",
+        fighting: "#D56723",
+        psychic: "#F366B9",
+        ghost: "#544F5B",
+        dragon: '#F16E57',
+        dark: '#707070'
+    }
+    const backgroundTypePokeTwo = {
+        grass: "#9BCC50",
+        flying: "#BDB9B8",
+        normal: "#A4ACAF",
+        electric: "#EED535",
+        ground: "#AB9842",
+        fairy: "#FDB9E9",
+        steel: "#A4ACAF",
+        ice: "#51C4E7"
+    }
+    let colorTypePoke = ""
+    if(typePoke in backgroundTypePokeOne) {
+        colorTypePoke = "#ffffff"
+        return [backgroundTypePokeOne[typePoke], colorTypePoke]
+    }
+    if(typePoke in backgroundTypePokeTwo) {
+        colorTypePoke = '#000000'
+        return [backgroundTypePokeTwo[typePoke], colorTypePoke]
+    }
+}
+
 const typesPoke = (pokemo) => {
     const div_types = document.createElement("div")
     div_types.setAttribute("id", "typesPokemons")
     for (var i in pokemo) {
         let spanTypePoke = document.createElement("span")
         spanTypePoke.innerHTML = pokemo[i].type.name
+        const [bgColorType, colorTypePok] = backgroundType(pokemo[i].type.name)
+        spanTypePoke.style.background = bgColorType
+        spanTypePoke.style.color = colorTypePok
         div_types.appendChild(spanTypePoke)
     }
     return div_types
