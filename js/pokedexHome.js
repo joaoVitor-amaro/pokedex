@@ -82,4 +82,18 @@ const creatListPoke = async () => {
     })
 }
 
+function pesquisarPoke() {
+    const cardPoke = document.querySelectorAll("#cardPoke")
+    searchInput = searchInput.value.toLocaleLowerCase()
+    if (searchInput != "") {
+        cardPoke.forEach((card) => {
+            card.style.display = 'none'
+        })
+        fetchPokemomSearch(searchInput)
+    } else {
+        alert('erro')
+    }
+}
+
+
 creatListPoke()
