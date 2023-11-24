@@ -58,6 +58,10 @@ section#inforPoke {
     gap: 50px; 
 }
 
+img#imagePoke {
+    object-fit: cover;
+}
+
 div#containerInforPoke {
     height: 100%;
     width: 250px;
