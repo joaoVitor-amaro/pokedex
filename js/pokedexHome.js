@@ -89,6 +89,31 @@ const getPokemomSearch = async (pokemom) => {
     return dataSearchPoke
 }
 
+const fetchPokemomSearch = (pokemomSearch) => {
+    const dataSearchPoke = getPokemomSearch(pokemomSearch);
+    dataSearchPoke.then((pokemom) => {
+            const articleCardPokemom = document.createElement("article")
+            const divIdPoke = document.createElement('div')
+            const imagePoke = document.createElement('img')
+            const titleNamePoke = document.createElement('h2')
+            articleCardPokemom.setAttribute('id', 'cardPoke')
+            divIdPoke.setAttribute("id", 'idPoke')
+            imagePoke.setAttribute('id', 'imgPoke')
+            titleNamePoke.setAttribute('id', 'titleNamePoke')
+            divIdPoke.innerHTML = `N° ${pokemom.id}`
+            imagePoke.src = pokemom.sprites.front_default
+            titleNamePoke.innerHTML = pokemom.name
+            articleCardPokemom.appendChild(divIdPoke)
+            articleCardPokemom.appendChild(imagePoke)
+            articleCardPokemom.appendChild(titleNamePoke)
+            articleCardPokemom.appendChild(typesPoke(pokemom.types))
+            sectionListpoke.appendChild(articleCardPokemom)
+    }).catch(erro => {
+        alert('Pokemom inexistente');
+        creatListPoke()
+    });
+}
+
 function pesquisarPoke() {
     const cardPoke = document.querySelectorAll("#cardPoke")
     searchInput = searchInput.value.toLocaleLowerCase()
