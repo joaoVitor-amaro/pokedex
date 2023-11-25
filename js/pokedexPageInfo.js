@@ -4,6 +4,7 @@ const heightPoke = document.querySelector("#heightPoke")
 const weightPoke = document.querySelector("#weightPoke")
 const typesPoke = document.querySelector('#typesPoke')
 const variacaoPokemon = document.querySelector("#varicaoPokemom")
+const movimentosPoke = document.querySelector("#movimentosPoke")
 
 const getidPokePagina = () => {
     const urlSearchParam = new URLSearchParams(window.location.search)
@@ -45,6 +46,18 @@ const ImgvariacaoPoke = (pokeVariacao, namePokemom) => {
     return imgFigurePokeVaria
 }
 
+const movesPokemon = (moves) => {
+    const containerMoves = document.createElement('div')
+    containerMoves.setAttribute("id", "divMove")
+    moves.forEach((movimentos) => {
+        const spanMove = document.createElement("span")
+        spanMove.innerHTML = movimentos.move.name
+        spanMove.setAttribute("id", 'spanMove')
+        containerMoves.appendChild(spanMove)
+    })
+    return containerMoves
+}
+
 const infoPoke = (id) => {
     GetInforPoke(id)
         .then((pokemom) => {
@@ -60,6 +73,8 @@ const infoPoke = (id) => {
             containerImgPokeInfor.appendChild(imgPokeInfo)
             typesPoke.appendChild(typesPokemon(pokemom.types))
             variacaoPokemon.appendChild(ImgvariacaoPoke(pokemom.sprites))
+            movimentosPoke.appendChild(movesPokemon(pokemom.moves))
+           console.log(movesPokemon(pokemom.moves))
         })
 }
 
