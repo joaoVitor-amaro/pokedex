@@ -31,13 +31,11 @@ const typesPokemon = (typesPoke) => {
 const ImgvariacaoPoke = (pokeVariacao, namePokemom) => {
     const listVariacaoPoke = ["front_default", "front_female", "front_shiny","front_shiny_female"]
     const imgFigurePokeVaria = document.createElement('figure')
-    imgFigurePokeVaria.setAttribute('id', "containerVariacaoPoke")
     for (var valoresVaricao of listVariacaoPoke) {
             if (pokeVariacao[valoresVaricao] != null) {
                 const imgVariacaoPoke = document.createElement('img')
                 imgVariacaoPoke.src = pokeVariacao[valoresVaricao]
                 imgVariacaoPoke.alt = namePokemom
-                imgVariacaoPoke.setAttribute("id", "pokemomvariacao")
                 imgVariacaoPoke.setAttribute("width", "180")
                 imgVariacaoPoke.setAttribute('height', '180')
                 imgFigurePokeVaria.appendChild(imgVariacaoPoke)
@@ -72,7 +70,7 @@ const infoPoke = (id) => {
             imgPokeInfo.setAttribute('id', "imagePoke")
             containerImgPokeInfor.appendChild(imgPokeInfo)
             typesPoke.appendChild(typesPokemon(pokemom.types))
-            variacaoPokemon.appendChild(ImgvariacaoPoke(pokemom.sprites))
+            variacaoPokemon.appendChild(ImgvariacaoPoke(pokemom.sprites, pokemom.name))
             movimentosPoke.appendChild(movesPokemon(pokemom.moves))
            console.log(movesPokemon(pokemom.moves))
         })
