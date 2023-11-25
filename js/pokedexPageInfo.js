@@ -111,7 +111,23 @@ function nextPoke() {
     togglePrevDisplayByID(novoId)
     resetInfoPoke()
     infoPoke(novoId)
-    
+}
+
+const PrevIdPoke = (postId) => {
+    const novoId = Number(postId) - 1;
+    const novoSearchParams = new URLSearchParams(window.location.search);
+    novoSearchParams.set("id", novoId);
+    const novaURL = `${window.location.pathname}?${novoSearchParams.toString()}`;
+    window.history.replaceState(null, null, novaURL);   
+    return novoId
+}
+
+function prevPoke() {
+    const postId = getidPokePagina()
+    const novoId = PrevIdPoke(postId)
+    togglePrevDisplayByID(novoId)
+    resetInfoPoke()
+    infoPoke(novoId)
 }
 
 infoPoke(getidPokePagina())
