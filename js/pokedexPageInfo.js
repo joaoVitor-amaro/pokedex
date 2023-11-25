@@ -78,4 +78,16 @@ const infoPoke = (id) => {
         })
 }
 
+function nextPoke() {
+    const postId = getidPokePagina()
+    if (postId !== null && postId !== undefined) {
+        const novoId = Number(postId) + 1;
+        const novoSearchParams = new URLSearchParams(window.location.search);
+        novoSearchParams.set("id", novoId);
+        const novaURL = `${window.location.pathname}?${novoSearchParams.toString()}`;
+        window.history.replaceState(null, null, novaURL);
+        infoPoke(novoId)
+    }
+}
+
 infoPoke(getidPokePagina())
