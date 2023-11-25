@@ -76,6 +76,16 @@ const infoPoke = (id) => {
         })
 }
 
+const resetInfoPoke = () => {
+    h1NamePokemom.innerHTML = ""
+    heightPoke.innerHTML = ""
+    weightPoke.innerHTML = ""
+    typesPoke.innerHTML = "tipo: "
+    containerImgPokeInfor.innerHTML = ''
+    variacaoPokemon.innerHTML = ""
+    movimentosPoke.innerHTML = ''
+}
+
 function nextPoke() {
     const postId = getidPokePagina()
     if (postId !== null && postId !== undefined) {
@@ -84,7 +94,8 @@ function nextPoke() {
         novoSearchParams.set("id", novoId);
         const novaURL = `${window.location.pathname}?${novoSearchParams.toString()}`;
         window.history.replaceState(null, null, novaURL);
-        infoPoke(novoId)
+        resetInfoPoke()
+        infoPoke(novoId)   
     }
 }
 
