@@ -76,6 +76,15 @@ const infoPoke = (id) => {
         })
 }
 
+const togglePrevDisplayByID = (id) => {
+    const prev = document.querySelector('.prev')
+    if (id == 1) {
+        prev.style.display = "none"
+    } else {
+        prev.style.display = "block"
+    }
+}
+
 const resetInfoPoke = () => {
     h1NamePokemom.innerHTML = ""
     heightPoke.innerHTML = ""
@@ -97,10 +106,12 @@ const NextIdPoke = (postId) => {
 
 function nextPoke() {
     const postId = getidPokePagina()
-    const novo = NextIdPoke(postId)
+    const novoId = NextIdPoke(postId)
+    togglePrevDisplayByID(novoId)
     resetInfoPoke()
-    infoPoke(novo)
+    infoPoke(novoId)
     
 }
 
 infoPoke(getidPokePagina())
+togglePrevDisplayByID(getidPokePagina())
