@@ -86,17 +86,21 @@ const resetInfoPoke = () => {
     movimentosPoke.innerHTML = ''
 }
 
+const NextIdPoke = (postId) => {
+    const novoId = Number(postId) + 1;
+    const novoSearchParams = new URLSearchParams(window.location.search);
+    novoSearchParams.set("id", novoId);
+    const novaURL = `${window.location.pathname}?${novoSearchParams.toString()}`;
+    window.history.replaceState(null, null, novaURL);   
+    return novoId
+}
+
 function nextPoke() {
     const postId = getidPokePagina()
-    if (postId !== null && postId !== undefined) {
-        const novoId = Number(postId) + 1;
-        const novoSearchParams = new URLSearchParams(window.location.search);
-        novoSearchParams.set("id", novoId);
-        const novaURL = `${window.location.pathname}?${novoSearchParams.toString()}`;
-        window.history.replaceState(null, null, novaURL);
-        resetInfoPoke()
-        infoPoke(novoId)   
-    }
+    const novo = NextIdPoke(postId)
+    resetInfoPoke()
+    infoPoke(novo)
+    
 }
 
 infoPoke(getidPokePagina())
