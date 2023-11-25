@@ -41,7 +41,7 @@ main {
 
 article#ContainerPokeInfo {
     margin: auto;
-    
+    margin-top: 20px;
     width: 800px;
     box-shadow: 1px 2px 5px #00000078; 
 }
@@ -93,19 +93,17 @@ div#containerInforPoke > p {
     margin: 15px 0;
     font-size: 1.1em;
 }
-
-section#varicaoPokemom {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 h2#TitleVariacaoPoke {
     text-align: center;
     margin: 30px 0 0px;
 }
 
-h2#movimentosPoke {
+div#varicaoPokemom > figure{
+    display: flex;
+    justify-content: center;
+}
+
+h2#titleMovimentosPoke {
     text-align: center;
     margin: 0px 0 15px;
 }
