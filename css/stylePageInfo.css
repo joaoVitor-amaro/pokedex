@@ -46,10 +46,29 @@ article#ContainerPokeInfo {
     box-shadow: 1px 2px 5px #00000078; 
 }
 
-h1#NamePokemom {
-    text-align: center;
+div#cabecalhoPoke {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     padding: 20px;
+}
+
+h1#NamePokemom { 
     font-size: 2.2em;
+} 
+
+span.material-icons{
+    font-size: 2em;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+span.prev:hover{
+    transform: translateX(-5px);
+}
+span.next:hover{
+    transform: translateX(5px);
 }
 
 section#inforPoke {
