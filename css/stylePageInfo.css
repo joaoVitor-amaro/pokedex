@@ -126,3 +126,30 @@ span#spanMove {
 span#spanMove:hover {
     transform: translateY(-5px);
 }
+
+@media screen and (max-width: 768px){
+    article#ContainerPokeInfo {
+        width: 350px;
+    }
+    section#inforPoke {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    div#containerInforPoke {
+        margin: 0;
+    }
+    div#varicaoPokemom  > figure {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    nav {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    nav img {
+        margin: 0;
+    }
+}
