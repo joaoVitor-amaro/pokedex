@@ -60,6 +60,7 @@ const infoPoke = (id) => {
     GetInforPoke(id)
         .then((pokemom) => {
             const imgPokeInfo = document.createElement('img') 
+            document.title = pokemom.name
             h1NamePokemom.innerHTML = pokemom.name
             imgPokeInfo.src = pokemom.sprites.front_default
             imgPokeInfo.alt = `${pokemom.name}`
