@@ -2,15 +2,8 @@ header {
     padding: 10px;
 }
 
-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 nav img {
-    width: 120px;
-    margin-left: 50px;
+    margin-left: 41px;
 }
 
 nav > p {
@@ -31,6 +24,10 @@ p a{
     transition: transform 0.3s ease
 }
 
+p#teste:hover  {
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
 p a:hover {
     text-decoration: underline;
 }
@@ -143,11 +140,6 @@ span#spanMove:hover {
         flex-direction: column;
         align-items: center;
         gap: 0;
-    }
-    nav {
-        margin: 0;
-        display: flex;
-        justify-content: center;
     }
     nav img {
         margin: 0;
