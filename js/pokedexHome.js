@@ -75,6 +75,7 @@ const creatListPoke = async () => {
         linkPoke.setAttribute('href', `pageInfoPoke.html?id=${pokemom.id}`)
         divIdPoke.innerHTML = `N° ${pokemom.id}`
         imagePoke.src = pokemom.sprites.front_default
+        imagePoke.setAttribute('alt', `${pokemom.name}`)
         titleNamePoke.innerHTML = pokemom.name
         articleCardPokemom.appendChild(divIdPoke)
         articleCardPokemom.appendChild(imagePoke)
@@ -107,7 +108,7 @@ const fetchPokemomSearch = (pokemomSearch) => {
             linkPoke.setAttribute('href', `pageInfoPoke.html?id=${pokemom.id}`)
             divIdPoke.innerHTML = `N° ${pokemom.id}`
             imagePoke.src = pokemom.sprites.front_default
-            imagePoke.setAttribute('id', `${pokemom.name}`)
+            imagePoke.setAttribute('alt', `${pokemom.name}`)
             titleNamePoke.innerHTML = pokemom.name
             articleCardPokemom.appendChild(divIdPoke)
             articleCardPokemom.appendChild(imagePoke)
