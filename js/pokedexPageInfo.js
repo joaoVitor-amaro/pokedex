@@ -90,7 +90,7 @@ const resetInfoPoke = () => {
     h1NamePokemom.innerHTML = ""
     heightPoke.innerHTML = ""
     weightPoke.innerHTML = ""
-    typesPoke.innerHTML = "tipo: "
+    typesPoke.innerHTML = ""
     containerImgPokeInfor.innerHTML = ''
     variacaoPokemon.innerHTML = ""
     movimentosPoke.innerHTML = ''
