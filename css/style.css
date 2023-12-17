@@ -8,7 +8,6 @@ header {
     padding: 8px 0 0;
 }
 
-
 nav {
     height: 100%;
     display: flex;
@@ -17,7 +16,13 @@ nav {
 
 nav img {
     width: 150px;
-    margin-left: 50px;
+    margin-left: 41px;
+}
+
+nav > p {
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 1.4em; 
 }
 
 @media screen and (max-width: 768px){
