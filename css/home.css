@@ -63,12 +63,15 @@ div#typesPokemons > span {
     border-radius: 20px;
     width: 80px;
 }
-@media screen and (max-width: 443px) {
+@media screen and (max-width: 760px) {
     article#cardPoke {
-        width: 200px;
+        width: 170px;
     }
     img#imgPoke {
         width: 159px;
     }
-    
+    div#typesPokemons > span {
+        width: 73px;
+        padding: 8px;
+    }
 }
