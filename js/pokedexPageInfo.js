@@ -110,6 +110,7 @@ function nextPoke() {
     const novoId = NextIdPoke(postId)
     togglePrevDisplayByID(novoId)
     resetInfoPoke()
+    location.reload()
     infoPoke(novoId)
 }
 
@@ -127,6 +128,7 @@ function prevPoke() {
     const novoId = PrevIdPoke(postId)
     togglePrevDisplayByID(novoId)
     resetInfoPoke()
+    location.reload()
     infoPoke(novoId)
 }
 
