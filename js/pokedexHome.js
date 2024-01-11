@@ -81,6 +81,7 @@ const creatListPoke = async () => {
         articleCardPokemom.appendChild(imagePoke)
         articleCardPokemom.appendChild(titleNamePoke)
         articleCardPokemom.appendChild(typesPoke(pokemom.types))
+        articleCardPokemom.translate = 'no'
         linkPoke.appendChild(articleCardPokemom)
         sectionListpoke.appendChild(linkPoke)
     })
