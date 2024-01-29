@@ -6,6 +6,7 @@ const typesPoke = document.querySelector('#typesPoke')
 const variacaoPokemon = document.querySelector("#varicaoPokemom")
 const movimentosPoke = document.querySelector("#movimentosPoke")
 
+
 const getidPokePagina = () => {
     const urlSearchParam = new URLSearchParams(window.location.search)
     return urlSearchParam.get("id")
@@ -105,14 +106,15 @@ const NextIdPoke = (postId) => {
     return novoId
 }
 
-function nextPoke() {
+document.getElementById("nextPokemom").addEventListener("click", ()=> {
     const postId = getidPokePagina()
     const novoId = NextIdPoke(postId)
     togglePrevDisplayByID(novoId)
     resetInfoPoke()
     location.reload()
     infoPoke(novoId)
-}
+    
+})
 
 const PrevIdPoke = (postId) => {
     const novoId = Number(postId) - 1;
@@ -123,14 +125,15 @@ const PrevIdPoke = (postId) => {
     return novoId
 }
 
-function prevPoke() {
+document.getElementById("prevPokemom").addEventListener("click", ()=>{
     const postId = getidPokePagina()
     const novoId = PrevIdPoke(postId)
     togglePrevDisplayByID(novoId)
     resetInfoPoke()
     location.reload()
     infoPoke(novoId)
-}
+    
+})
 
 infoPoke(getidPokePagina())
 togglePrevDisplayByID(getidPokePagina())
