@@ -85,3 +85,6 @@ Este projeto não possui licença definida no repositório. Caso pretenda reutil
 ## 👤 Autor
 
 [João Vitor Amaro](https://github.com/joaoVitor-amaro)
+
+## Link do projeto
+- https://projet-pokedex.netlify.app/
